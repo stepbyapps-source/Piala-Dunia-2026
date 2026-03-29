@@ -2,174 +2,15 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #0b0f1a;
   color: white;
-}
 
-/* ================= HEADER ================= */
-header {
-  background: linear-gradient(90deg, #1e3c72, #2a5298);
-  padding: 20px;
-  text-align: center;
-}
+  background: 
+    linear-gradient(rgba(11,15,26,0.85), rgba(11,15,26,0.85)),
+    url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2');
 
-h1 {
-  margin: 0;
-  letter-spacing: 1px;
-}
-
-/* ================= SECTION ================= */
-section {
-  padding: 20px;
-}
-
-h2 {
-  margin-bottom: 15px;
-  border-left: 5px solid #00d4ff;
-  padding-left: 10px;
-}
-
-/* ================= GROUP STAGE ================= */
-.group-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.group-card {
-  background: #121826;
-  border-radius: 12px;
-  padding: 15px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-}
-
-.group-card:hover {
-  transform: translateY(-5px) scale(1.03);
-  background: #1a2235;
-}
-
-.group-card h3 {
-  margin-top: 0;
-  border-bottom: 1px solid #2a2f45;
-  padding-bottom: 5px;
-}
-
-.group-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.group-card li {
-  padding: 6px 0;
-  border-bottom: 1px solid #1f263a;
-  font-size: 14px;
-}
-
-/* ================= BRACKET ================= */
-.bracket {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  padding-bottom: 10px;
-}
-
-.round {
-  background: #121826;
-  padding: 15px;
-  border-radius: 12px;
-  min-width: 220px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-}
-
-.round h3 {
-  text-align: center;
-  margin-top: 0;
-}
-
-/* MATCH BOX */
-.match {
-  background: #1a2235;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 8px;
-  text-align: center;
-  transition: all 0.2s ease;
-  border: 1px solid transparent;
-}
-
-.match:hover {
-  background: #00d4ff;
-  color: black;
-  cursor: pointer;
-  border: 1px solid #00d4ff;
-}
-
-/* FINAL */
-.final-round {
-  background: gold;
-  color: black;
-}
-
-.final {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-/* ================= SCROLLBAR (BIAR KEREN) ================= */
-.bracket::-webkit-scrollbar {
-  height: 8px;
-}
-
-.bracket::-webkit-scrollbar-thumb {
-  background: #00d4ff;
-  border-radius: 10px;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 1000px) {
-  .group-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .group-container {
-    grid-template-columns: 1fr;
-  }
-}
-/* ================= FIX BRACKET FULL ================= */
-.round {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  justify-content: center;
-}
-
-.match span {
-  display: inline-block;
-  min-width: 80px;
-}
-
-/* jarak antar round biar enak dilihat */
-.bracket {
-  align-items: flex-start;
-}
-
-/* biar tinggi match konsisten */
-.match {
-  min-height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-/* ================= GLOBAL ================= */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #0b0f1a;
-  color: white;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 /* ================= HEADER ================= */
@@ -192,16 +33,16 @@ h2 {
   padding-left: 10px;
 }
 
-/* ================= GROUP GRID ================= */
+/* ================= GROUP ================= */
 .group-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
-/* ================= CARD ================= */
 .group-card {
-  background: #121826;
+  background: rgba(18, 24, 38, 0.85);
+  backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 15px;
   transition: 0.3s;
@@ -210,46 +51,74 @@ h2 {
 
 .group-card:hover {
   transform: translateY(-5px);
-  background: #1a2235;
+  background: rgba(26, 34, 53, 0.9);
 }
 
-/* ================= TITLE ================= */
 .group-card h3 {
-  margin: 0 0 10px;
-  border-bottom: 1px solid #2a2f45;
-  padding-bottom: 5px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
-/* ================= TEAM LIST ================= */
 .group-card ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 .group-card li {
   padding: 8px;
   margin: 5px 0;
-  background: #1a2235;
+  background: rgba(26, 34, 53, 0.8);
   border-radius: 8px;
-  transition: 0.2s;
   cursor: pointer;
   text-align: center;
+  transition: 0.2s;
 }
 
-/* HOVER TEAM */
 .group-card li:hover {
   background: #00d4ff;
   color: black;
-  transform: scale(1.05);
 }
 
-/* TEAM SELECTED */
 .group-card li.selected {
   background: #00d4ff;
   color: black;
   font-weight: bold;
+}
+
+/* ================= BRACKET ================= */
+.bracket {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.round {
+  background: rgba(18, 24, 38, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 12px;
+  min-width: 220px;
+}
+
+.match {
+  background: rgba(26, 34, 53, 0.9);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.match:hover {
+  background: #00d4ff;
+  color: black;
+}
+
+/* FINAL */
+.final-round {
+  background: gold;
+  color: black;
 }
 
 /* ================= RESPONSIVE ================= */
